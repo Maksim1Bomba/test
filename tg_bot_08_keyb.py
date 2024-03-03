@@ -9,7 +9,6 @@ from PIL import ImageFont, Image, ImageDraw
 from io import BytesIO
 import emoji
 from transformers import GPT2LMHeadModel, GPT2Tokenizer 
-import torch 
 
 token = "6221685456:AAGY_pnsyHSAI9Hm9ZTDI2-uycHYSjfe5-E"
 
