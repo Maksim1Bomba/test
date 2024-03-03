@@ -610,6 +610,16 @@ def sticker_made(text, author):
     return sticker
 
 def data_sq(userid, name_of_button):
+    """
+    Log user actions in database
+
+    Parameters
+    ----------
+        userid : int
+            user id
+        name_of_button : str
+            name of button that was clicked by the user
+    """
     cur.execute('''
             insert into user_logs (Userid, ps)
             values (?, ?)
@@ -617,9 +627,11 @@ def data_sq(userid, name_of_button):
     
     dbconn.commit()
 
-# Старт
 async def main():
-    await dp.start_polling(bot)
+    """
+    Runs server main loop
+    """
 
+    await dp.start_polling(bot)
 
 asyncio.run(main())
